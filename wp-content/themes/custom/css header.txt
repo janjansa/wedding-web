@@ -1,0 +1,6 @@
+/*
+Theme Name: Thao-Mira 2023
+Text Domain: Thao-Mira 2023
+Version: 1.0
+Author: Miroslav Pokorny
+*/

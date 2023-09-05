@@ -1,0 +1,28 @@
+// --- SASS functions definitions ---
+
+@use "sass:math";
+
+@function em($pixels, $content: 16) {
+    @return (math.div($pixels, $content)) * 1em;
+}
+
+
+// --- disable html elements on specific viewports ---
+@function px_to_vw_desktop($px) {
+    @return calc($px/1920 * 100vw);
+}
+
+@function px_to_vw_tablet($px) {
+    @return calc($px/768 * 100vw);
+}
+
+@function px_to_vw_mobile($px) {
+    @return calc($px/375 * 100vw);
+}
+
+@function px_to_vh_desktop($px) {
+    @return calc($px/1080 * 100vh);
+}
+@function px_to_svh_desktop($px) {
+    @return calc($px/1080 * 100svh);
+}

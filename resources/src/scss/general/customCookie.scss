@@ -1,0 +1,98 @@
+// --- override styles of cookie popup ---
+
+#cc--main{
+    z-index: 200 !important;
+}
+
+#cm {
+    // bottom: 32px !important;
+    // right: 32px !important;
+    background: #485956 !important;
+    border-radius: 24px !important;
+    padding: 26px 32px !important;
+    box-shadow: unset !important;
+
+    @include mobileMax768p {
+        left: 16px !important;
+        right: 16px !important;
+        bottom: 16px !important;
+
+    }
+
+    #c-inr-i {
+        width: 100%;
+    }
+
+    #c-ttl {
+        @include bodyMedium;  
+        color: #FFFFFF;
+    }
+
+    #c-txt {
+        @include bodySmallRegular;
+        color: #FFFFFF;
+        opacity: 0.800000011920929;
+        .cc-link {
+            font-weight: 580;
+            color: #FFFFFF;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+            @media (hover: hover) {
+                cursor: none;
+            }
+        }
+    }
+
+    
+    #c-bns {
+        //min-width: 150px;
+        @include mobileMax768p {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+        }
+    }
+    .c-bn{
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 60px;
+        @include bodyMedium;
+        color: #FFFFFF;
+
+        &#c-p-bn {
+            background-color: rgba(255, 255, 255, 1);
+            color: var(--primary-text-color);
+            border: 1px solid rgba(255, 255, 255, 1);
+
+            @media (hover: hover) {
+                transition: background-color 0.25, color 0.25;
+                cursor: none;
+                &:hover {   
+                    background: rgba(255, 255, 255, 0);
+                    color: rgba(255, 255, 255, 1);
+                    // border: 1px solid rgba(255, 255, 255, 1);
+                }
+            }
+        }
+        &#c-s-bn {
+            margin-top: 8px;
+            background: rgba(255, 255, 255, 0);
+            color: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(255, 255, 255, 1);
+            border-radius: 100px;
+
+            @media (hover: hover) {
+                transition: background-color 0.25;
+                cursor: none;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 1);
+                    color: var(--primary-text-color);
+                }
+            }
+
+            @include mobileMax768p {
+                margin-top: 0px;
+            }
+        }
+    }
+    
+}

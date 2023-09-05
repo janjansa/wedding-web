@@ -1,0 +1,447 @@
+@font-face {
+    font-family: 'Be Vietnam Pro';
+    src: url('fonts/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/Haffer/Haffer-Bold.woff2');
+}
+@font-face {
+    font-family: 'Haffer';
+    font-style: italic;
+    font-weight: 700;
+    src: url('./fonts/Haffer/Haffer-BoldItalic.woff2');
+}
+@font-face {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/Haffer/Haffer-SemiBold.woff2');
+}
+@font-face {
+    font-family: 'Haffer';
+    font-style: italic;
+    font-weight: 600;
+    src: url('./fonts/Haffer/Haffer-SemiBoldItalic.woff2');
+}
+@font-face {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/Haffer/Haffer-Medium.woff2');
+}
+@font-face {
+    font-family: 'Haffer';
+    font-style: italic;
+    font-weight: 500;
+    src: url('./fonts/Haffer/Haffer-MediumItalic.woff2');
+}
+@font-face {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Haffer/Haffer-Regular.woff2');
+}
+@font-face {
+    font-family: 'Haffer';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./fonts/Haffer/Haffer-RegularItalic.woff2');
+}
+
+@font-face {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./fonts/Haffer/Haffer-Light.woff2');
+}
+@font-face {
+    font-family: 'Haffer';
+    font-style: italic;
+    font-weight: 300;
+    src: url('./fonts/Haffer/Haffer-LightItalic.woff2');
+}
+
+@font-face {
+    font-family: 'Comic Neue';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Comic_Neue/ComicNeue-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'SF NS Rounded';
+    font-style: normal;
+    src: url('./fonts/SFNSRounded.ttf');
+}
+
+@font-face {
+    font-family: 'Bodoni Moda';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/BodoniModa-VariableFont_opsz,wght.ttf');
+}
+
+@font-face {
+    font-family: 'Whisper';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Whisper-Regular.ttf');
+}
+
+@mixin comic{
+    font-family: 'Comic Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    color: red
+}
+
+@mixin h01{
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: px_to_vw_desktop(164);
+    line-height: 115%;
+    letter-spacing: -0.05em;
+    color: var(--primary-text-color);
+
+    @include mobileMax952p {
+        font-size: px_to_vw_tablet(64);
+    }
+    @include mobileMax768p {
+        font-size: px_to_vw_mobile(48) !important;
+        line-height: 110%;
+    }
+}
+@mixin h02{
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: px_to_vw_desktop(120);
+    line-height: 115%;
+    letter-spacing: -0.05em;
+    color: var(--primary-text-color);
+    @include mobileMax952p {
+        font-size: 48px;
+    }
+}
+@mixin h03{
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: px_to_vw_desktop(80);
+    line-height: 115%;
+    letter-spacing: -0.05em;
+    color: var(--primary-text-color);
+    @include mobileMax952p{
+        font-size: 32px;
+    }
+}
+@mixin h04{
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: px_to_vw_desktop(48);
+    line-height: 115%;
+    letter-spacing: -0.04em;
+    color: var(--primary-text-color);
+    @include mobileMax952p {
+        font-size: 28px;
+    }
+}
+@mixin h04medium{
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 500;
+    font-size: px_to_vw_desktop(48);
+    line-height: 115%;
+    letter-spacing: -0.04em;
+    color: var(--primary-text-color);
+    @include mobileMax952p {
+        font-size: 28px;
+    }
+}
+@mixin h05{
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: px_to_vw_desktop(40);
+    line-height: 130%;
+    letter-spacing: -0.04em;
+    color: var(--primary-text-color);
+    @include mobileMax952p {
+        font-size: 24px;
+    }
+}
+@mixin h06{
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: px_to_vw_desktop(32);
+    line-height: 130%;
+    letter-spacing: -0.04em;
+    color: var(--primary-text-color);
+
+    @include mobileMax952p {
+        font-size: 22px;
+        letter-spacing: -0.03em;
+    }
+}
+@mixin h07{
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -0.04em;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 26px;
+    }
+    @include windowMax1700p {
+        font-size: 20px;
+    }
+    @include windowMax1280p {
+        font-size: 18px;
+    }
+    @include mobileMax952p {
+        font-size: 20px;
+    }
+    @include mobileMax768p {
+        font-size: 20px;
+    }
+}
+
+@mixin bodyRegularBig {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 22px;
+    }
+    @include windowMax1700p {
+        font-size: 18px;
+    }
+    @include mobileMax952p{
+        font-size: 18px;
+    }
+}
+@mixin bodyRegular {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 20px;
+    }
+    @include windowMax1700p {
+        font-size: 16px;
+    }
+    @include mobileMax952p{
+        font-size: 16px;
+    }
+}
+@mixin bodyRegular2 {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 20px;
+    }
+    @include windowMax1700p {
+        font-size: 16px;
+    }
+    @include mobileMax952p{
+        font-size: 16px;
+    }
+}
+@mixin bodyMedium {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    // line-height: 110%;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 20px;
+    }
+    @include windowMax1700p {
+        font-size: 16px;
+    }
+    @include mobileMax952p{
+        font-size: 16px;
+    }
+}
+@mixin bodyMedium2 {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 170%;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 20px;
+    }
+    @include windowMax1700p {
+        font-size: 16px;
+    }
+    @include mobileMax952p{
+        font-size: 16px;
+    }
+}
+@mixin bodySmallRegular {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 18px;
+    }
+    @include windowMax1700p {
+        font-size: 14px;
+    }
+    @include mobileMax952p{
+        font-size: 14px;
+    }
+}
+@mixin bodySmallRegular2 {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 170%;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 18px;
+    }
+    @include windowMax1700p {
+        font-size: 14px;
+    }
+    @include mobileMax952p{
+        font-size: 14px;
+    }
+}
+@mixin bodySmallMedium {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 18px;
+    }
+    @include windowMax1700p {
+        font-size: 14px;
+    }
+    @include mobileMax952p{
+        // font-size: 12px;
+        font-size: 14px;
+    }
+}
+@mixin capsLight {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 20px;
+    }
+    @include windowMax1700p {
+        font-size: 16px;
+    }
+    @include mobileMax952p{
+        font-size: 16px;
+    }
+}
+@mixin capsMedium {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 20px;
+    }
+    @include windowMax1700p {
+        font-size: 16px;
+    }
+    @include mobileMax952p{
+        font-size: 16px;
+    }
+}
+@mixin capsSmallLight {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 18px;
+    }
+    @include windowMax1700p {
+        font-size: 14px;
+    }
+    @include mobileMax952p{
+        // font-size: 12px;
+        font-size: 14px;
+    }
+}
+@mixin capsSmallMedium {
+    font-family: 'Haffer';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
+
+    @include windowMin2200p {
+        font-size: 18px;
+    }
+    @include windowMax1700p {
+        font-size: 14px;
+    }
+    @include mobileMax952p{
+        // font-size: 12px;
+        font-size: 14px;
+    }
+}

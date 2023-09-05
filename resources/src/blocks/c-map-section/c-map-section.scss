@@ -1,0 +1,64 @@
+.c-map-section {
+    height: 100vh;
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url('images/bg/map_section_bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: px_to_vw_desktop(150);
+
+        @include mobileMax952p {
+            padding: px_to_vw_mobile(30);
+        }
+    }
+
+    &__headline {
+        font-family: "Bodoni Moda";
+        font-size: px_to_vw_desktop(200);
+        line-height: 110%;
+        color: #{$white};
+        text-align: center;
+
+        @include mobileMax952p {
+            font-size: px_to_vw_mobile(64);
+        }
+    }
+
+    &__map-button {
+      width: px_to_vw_desktop(180);
+      height: px_to_vw_desktop(60);
+      border: 1px solid #{$white};
+      border-radius: px_to_vw_desktop(32);
+      color: #{$white};
+      font-family: 'SF NS Rounded';
+      font-style: normal;
+      font-weight: 100;
+      font-size: px_to_vw_desktop(18);
+      margin-top: px_to_vw_desktop(64);
+      cursor: pointer;
+      transition: 0.15s;
+
+      &:hover {
+        background-color: #{$white};
+        color: #5A595B;
+      }
+
+      @include mobileMax952p {
+          font-size: px_to_vw_mobile(16);
+          width: px_to_vw_mobile(167);
+          height: px_to_vw_mobile(58);
+          margin-top: px_to_vw_mobile(40);
+          border-radius: px_to_vw_mobile(32);
+      }
+    }
+
+    @include mobileMax952p {
+        min-height: 667px;
+    }
+}

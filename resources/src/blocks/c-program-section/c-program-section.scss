@@ -1,0 +1,69 @@
+.c-program-section {
+    padding: px_to_vw_desktop(330) 0 px_to_vw_desktop(86);
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #{$white};
+        position: relative;
+
+        @include mobileMax952p {
+            padding: 0 px_to_vw_mobile(42);
+        }
+    }
+
+    &__headline {
+      font-family: 'Bodoni Moda';
+      font-style: normal;
+      font-weight: 400;
+      font-size: px_to_vw_desktop(200);
+      position: absolute;
+      top: 0px;
+      opacity: 0.05;
+
+      @include mobileMax952p {
+          top: 0px;
+      }
+    }
+
+    &__timebox {
+      text-align: center;
+      margin-bottom: px_to_vw_desktop(210);
+
+      h3 {
+        font-family: 'Bodoni Moda';
+        font-style: normal;
+        font-weight: 400;
+        font-size: px_to_vw_desktop(160);
+        margin-bottom: px_to_vw_desktop(42);
+
+        @include mobileMax952p {
+            font-size: px_to_vw_mobile(64);
+            margin-bottom: px_to_vw_mobile(32);
+        }
+      }
+
+      p {
+        font-family: 'SF NS Rounded';
+        font-style: normal;
+        font-weight: 100;
+        font-size: px_to_vw_desktop(24);
+
+        @include mobileMax952p {
+            font-size: px_to_vw_mobile(20);
+            line-height: 160%;
+        }
+      }
+
+      @include mobileMax952p {
+          margin-bottom: px_to_vw_mobile(120);
+      }
+    }
+
+    @include mobileMax952p {
+        padding: px_to_vw_mobile(150) 0 px_to_vw_mobile(21);
+    }
+}

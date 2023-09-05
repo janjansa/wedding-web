@@ -1,0 +1,24 @@
+
+:root {
+    --container-padding: 3vw;
+    --container-width: 94vw;
+
+    @include mobileMax952p(){
+        --container-padding: 5.2vw;
+        --container-width: 89.6vw;
+    }
+    @include mobileMax768p {
+        --container-padding: 24px;
+        --container-width: calc(100vw - 48px);
+    }
+}
+
+.container {
+    box-sizing: border-box;
+    width: 100%;
+
+    // padding: 0 var(--container-padding) 0 var(--container-padding);
+    margin: 0 auto 0 auto;
+
+    overflow: hidden;
+}

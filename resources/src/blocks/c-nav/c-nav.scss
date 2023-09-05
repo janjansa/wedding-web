@@ -1,0 +1,51 @@
+.c-nav {
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    width: 104px;
+    height: 100vh;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+
+    .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 44px 0 64px;
+    }
+
+    &__menu {
+        hr {
+          width: 24px;
+          margin: 0 0 6.5px 0;
+          border: 1.5px solid #{$white};
+        }
+    }
+
+    &__bottom {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 35px;
+
+      p {
+        color: #{$white};
+        font-family: 'SF NS Rounded';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 14px;
+        line-height: 20px;
+        transform: rotate(-90deg);
+      }
+
+      img {
+        height: 39px;
+      }
+    }
+
+    @include mobileMax952p {
+        display: none;
+    }
+}

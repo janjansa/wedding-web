@@ -1,0 +1,25 @@
+.c-footer {
+
+    .container {
+        height: 100%;
+        text-align: center;
+        padding: px_to_vw_desktop(86) 0 px_to_vw_desktop(40);
+
+        @include mobileMax952p {
+            padding: px_to_vw_desktop(21) 0 px_to_vw_mobile(32);
+        }
+    }
+
+    &__copyright {
+        font-family: "SF NS Rounded";
+        font-style: normal;
+        font-weight: 100;
+        font-size: px_to_vw_desktop(18);
+        color: #{$white};
+        opacity: 0.5;
+
+        @include mobileMax952p {
+            font-size: px_to_vw_mobile(16);
+        }
+    }
+}
