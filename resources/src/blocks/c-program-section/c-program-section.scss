@@ -1,5 +1,9 @@
 .c-program-section {
-    padding: px_to_vw_desktop(330) 0 px_to_vw_desktop(86);
+
+
+    @include mobileMax952p {
+
+    }
 
     .container {
         height: 100%;
@@ -7,11 +11,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 200px;
+
+        padding: px_to_vw_desktop(320) 0 px_to_vw_desktop(296);
+
         color: #{$white};
         position: relative;
 
         @include mobileMax952p {
-            padding: 0 px_to_vw_mobile(42);
+          gap: 120px;
+          padding: px_to_vw_mobile(150) 0 px_to_vw_mobile(141);
         }
     }
 
@@ -21,28 +30,26 @@
       font-weight: 400;
       font-size: px_to_vw_desktop(200);
       position: absolute;
-      top: 0px;
+      top: 50vh;
+      transform: translate(0, -50%);
       opacity: 0.05;
-
-      @include mobileMax952p {
-          top: 0px;
-      }
     }
 
     &__timebox {
       text-align: center;
-      margin-bottom: px_to_vw_desktop(210);
 
       h3 {
         font-family: 'Bodoni Moda';
         font-style: normal;
         font-weight: 400;
         font-size: px_to_vw_desktop(160);
-        margin-bottom: px_to_vw_desktop(42);
+        line-height: 118%;
+        margin-bottom: 32px;
 
         @include mobileMax952p {
             font-size: px_to_vw_mobile(64);
-            margin-bottom: px_to_vw_mobile(32);
+            line-height: 112%;
+            margin-bottom: 32px;
         }
       }
 
@@ -50,20 +57,22 @@
         font-family: 'SF NS Rounded';
         font-style: normal;
         font-weight: 100;
-        font-size: px_to_vw_desktop(24);
+        font-size: 24px;
+
+        @include windowMin2200p {
+          font-size: 26px;
+        }
+
+        @include windowMax1700p {
+          font-size: 22px;
+        }
 
         @include mobileMax952p {
-            font-size: px_to_vw_mobile(20);
+            width: 290px;
+            font-size: 20px;
             line-height: 160%;
         }
       }
-
-      @include mobileMax952p {
-          margin-bottom: px_to_vw_mobile(120);
-      }
     }
 
-    @include mobileMax952p {
-        padding: px_to_vw_mobile(150) 0 px_to_vw_mobile(21);
-    }
 }

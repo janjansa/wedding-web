@@ -1,24 +1,18 @@
 <section class="c-program-section">
     <div class="container">
-        <h2 class="c-program-section__headline">HARMONOGRAM</h2>
-        <div class="c-program-section__timebox">
-          <h3>14:00</h3>
-          <p>SVATEBNÍ OBŘAD PŘED STODOLOU</p>
-        </div>
+        <h2 class="c-program-section__headline desktop-only">HARMONOGRAM</h2>
 
+        {% for time, desc in [
+          ["14:00", "SVATEBNÍ OBŘAD PŘED STODOLOU"],
+          ["15:00", "FOCENÍ, OTEVŘENÍ RAUTU, ZÁBAVA"],
+          ["18:00", "PŘÍPITKY, SERVÍROVANÁ VEČEŘE, KRÁJENÍ DORTU"],
+          ["22:00", "PÁRTY, NOČNÍ OBČERSTVENÍ"]]
+        %}
         <div class="c-program-section__timebox">
-          <h3>15:00</h3>
-          <p>FOCENÍ, OTEVŘENÍ RAUTU, ZÁBAVA</p>
+          <h3>{{ time }}</h3>
+          <p>{{ desc }}</p>
         </div>
-
-        <div class="c-program-section__timebox">
-          <h3>18:00</h3>
-          <p>PŘÍPITKY, SERVÍROVANÁ VEČEŘE, KRÁJENÍ DORTU</p>
-        </div>
-
-        <div class="c-program-section__timebox">
-          <h3>22:00</h3>
-          <p>PÁRTY, NOČNÍ OBČERSTVENÍ</p>
-        </div>
+        {% endfor %}
+        
     </div>
 </section>

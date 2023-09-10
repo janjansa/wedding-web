@@ -7,15 +7,33 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: url('images/bg/map_section_bg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
         padding: px_to_vw_desktop(150);
+        position: relative;
+        overflow: hidden;
 
         @include mobileMax952p {
             padding: px_to_vw_mobile(30);
         }
+
+    }
+
+    &__bg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      z-index: -1000;
+
+      @include mobileMax952p {
+          height: 100vh;
+          width: auto;
+      }
+
+      @media (orientation: landscape) {
+        width: 100%;
+        height: auto;
+      }
     }
 
     &__headline {
@@ -31,15 +49,14 @@
     }
 
     &__map-button {
-      width: px_to_vw_desktop(180);
-      height: px_to_vw_desktop(60);
+      padding: 18px 32px;
       border: 1px solid #{$white};
-      border-radius: px_to_vw_desktop(32);
+      border-radius: 32px;
       color: #{$white};
       font-family: 'SF NS Rounded';
       font-style: normal;
       font-weight: 100;
-      font-size: px_to_vw_desktop(18);
+      font-size: 18px;
       margin-top: px_to_vw_desktop(64);
       cursor: pointer;
       transition: 0.15s;
@@ -49,12 +66,19 @@
         color: #5A595B;
       }
 
+      @include windowMin2200p {
+        font-size: 20px;
+        padding: 20px 34px;
+      }
+
+      @include windowMax1700p {
+        font-size: 16px;
+        padding: 16px 30px;
+      }
+
       @include mobileMax952p {
-          font-size: px_to_vw_mobile(16);
-          width: px_to_vw_mobile(167);
-          height: px_to_vw_mobile(58);
+          font-size: 16px;
           margin-top: px_to_vw_mobile(40);
-          border-radius: px_to_vw_mobile(32);
       }
     }
 

@@ -192,7 +192,59 @@ appHeight()
 //     // custom cleanup code here (runs when it STOPS matching)
 //     };
 // });
-//=include ../blocks/**/*.js
+if (document.querySelector(".c-hero")) {
+  gsap.from(".c-hero__textblock", {y: 250, opacity: 0, duration: 1.5, ease: "power3", delay: 0.3});
+  gsap.from(".c-hero__pic1", {y: 250, opacity: 0, duration: 1.4, ease: "power3", delay: 1.4});
+  gsap.from(".c-hero__pic2", {y: 250, opacity: 0, duration: 1.4, ease: "power3", delay: 1.4});
+  gsap.from(".c-hero__date", {y: 100, opacity: 0, duration: 1.4, ease: "power3", delay: 1.4});
+  gsap.from(".c-hero__leaves", {y: 100, opacity: 0, duration: 1.4, ease: "power3", delay: 1.4});
+
+  let animation = window.innerWidth > 952 ? '{"x": 200, "duration": 1.4, "ease": "power3", "delay": 1.4}' : '{"y": -200, "duration": 1.4, "ease": "power3", "delay": 1.4}';
+  gsap.from(".c-hero__title", JSON.parse(animation));
+}
+
+if (document.querySelector(".c-map-section")) {
+  let width = window.innerWidth;
+  let height = (width / 16) * 9;
+
+  if (width < 952 && window.matchMedia('(orientation: portrait)').matches) {
+    height = window.innerHeight;
+    width = (height / 9) * 16;
+  }
+
+  gsap.fromTo(".c-map-section__bg", {width: 0, height: 0}, {width: width, height: height, duration: 1.5, ease: "power3",
+    scrollTrigger: {
+      trigger: ".c-map-section",
+      start: "top 80%",
+      end: "bottom bottom",
+      scrub: true
+    }
+  });
+}
+
+if (document.querySelector(".c-nav") && window.innerWidth > 952) {
+  gsap.from(".c-nav", {x: -200, duration: 1.4, ease: "power3", delay: 1.4});
+}
+
+if (document.querySelector(".c-program-section")) {
+  gsap.to(".c-program-section__headline", {
+    scrollTrigger: {
+      trigger: ".c-program-section__headline",
+      start: "center center",
+      end: "center top-=5000px",
+      scrub: true,
+      pin: true
+    }
+  })
+
+  gsap.from(".c-program-section__timebox", {y: 250, duration: 1.3, ease: "power3",
+    scrollTrigger: {
+      trigger: ".c-program-section",
+      start: "top 50%"
+    }
+  })
+}
+
 // obtain plugin
 var cc = initCookieConsent();
 

@@ -3,10 +3,10 @@
     .container {
         height: 100%;
         text-align: center;
-        padding: px_to_vw_desktop(86) 0 px_to_vw_desktop(40);
+        padding-bottom: 40px;
 
         @include mobileMax952p {
-            padding: px_to_vw_desktop(21) 0 px_to_vw_mobile(32);
+          padding-bottom: 32px;
         }
     }
 
@@ -14,12 +14,16 @@
         font-family: "SF NS Rounded";
         font-style: normal;
         font-weight: 100;
-        font-size: px_to_vw_desktop(18);
+        font-size: 18px;
         color: #{$white};
         opacity: 0.5;
 
-        @include mobileMax952p {
-            font-size: px_to_vw_mobile(16);
+        @include windowMin2200p {
+            font-size: 20px;
+        }
+
+        @include windowMax1700p {
+            font-size: 16px;
         }
     }
 }

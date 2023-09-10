@@ -1,6 +1,13 @@
 .c-hero {
     height: 100vh;
 
+    @include mobileMax952p {
+      height: 120vh;
+      min-height: 650px;
+      box-sizing: border-box;
+      padding-bottom: 10vh;
+    }
+
     .container {
       height: 100%;
       display:flex;
@@ -21,6 +28,18 @@
       top: 48px;
       right: 64px;
 
+      @include windowMin2200p {
+        font-size: 20px;
+        top: 58px;
+        right: 74px;
+      }
+
+      @include windowMax1700p {
+        font-size: 16px;
+        top: 38px;
+        right: 54px;
+      }
+
       @include mobileMax952p {
         top: 40px;
         right: 50%;
@@ -30,6 +49,7 @@
 
     &__pic1 {
       width: px_to_vw_desktop(314);
+      height: px_to_vw_desktop(370);
       position: absolute;
       top: px_to_vw_desktop(218);
       left: px_to_vw_desktop(226);
@@ -37,6 +57,7 @@
 
       @include mobileMax952p {
         width: px_to_vw_mobile(177);
+        height: px_to_vw_mobile(209);
         top: 104px;
         left: px_to_vw_mobile(-25);
       }
@@ -44,13 +65,15 @@
 
     &__pic2 {
       width: px_to_vw_desktop(424);
+      height: px_to_vw_desktop(500);
       position: absolute;
       right: px_to_vw_desktop(160);
-      bottom: px_to_vw_desktop(189);
+      bottom: px_to_vw_desktop(155);
       z-index: -1;
 
       @include mobileMax952p {
         width: px_to_vw_mobile(240);
+        height: px_to_vw_mobile(284);
         right: px_to_vw_mobile(-62);
         bottom: px_to_vw_mobile(120);
       }
@@ -60,38 +83,44 @@
       position: relative;
       padding-top: px_to_vw_desktop(95);
 
+      @include mobileMax952p {
+        padding-top: px_to_vw_mobile(25);
+      }
+
       img {
         position: absolute;
-        top: px_to_vw_desktop(-30);
+        top: px_to_vw_desktop(35);
         left: px_to_vw_desktop(651);
         width: px_to_vw_desktop(45);
 
         @include mobileMax952p {
-          top: px_to_vw_mobile(-15);
+          top: px_to_vw_mobile(5);
           left: px_to_vw_mobile(183);
           width: px_to_vw_mobile(13);
         }
       }
 
-      @include mobileMax952p {
-        padding-top: px_to_vw_mobile(25);
-      }
     }
 
     &__headline {
+        position: relative;
         font-family: "Bodoni Moda";
         font-style: normal;
         font-weight: 400;
         font-size: px_to_vw_desktop(228);
-        line-height: 43%;
+        line-height: 110%;
         text-align: center;
 
         span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
           font-family: "Whisper";
           font-style: normal;
           font-weight: 400;
           font-size: px_to_vw_desktop(183.77);
-          line-height: 85%;
+          // line-height: 85%;
           opacity: 0.1;
 
           @include mobileMax952p {
@@ -108,27 +137,41 @@
       font-family: 'SF NS Rounded';
       font-style: normal;
       font-weight: 100;
-      font-size: px_to_vw_desktop(24);
-      margin-top: px_to_vw_desktop(124);
+      font-size: 24px;
+      margin-top: px_to_vw_desktop(54);
+
+      @include windowMin2200p {
+        font-size: 26px;
+      }
+
+      @include windowMax1700p {
+        font-size: 22px;
+      }
 
       @include mobileMax952p {
-        font-size: px_to_vw_mobile(20);
-        margin-top: px_to_vw_mobile(67);
+        font-size: 20px;
+        margin-top: px_to_vw_mobile(33);
       }
     }
 
     &__leaves {
       margin-top: px_to_vw_desktop(24);
-      width: px_to_vw_desktop(208);
+      width: 208px;
+      height: 29px;
+
+      @include windowMin2200p {
+        width: 228px;
+      }
+
+      @include windowMax1700p {
+        width: 188px;
+      }
 
       @include mobileMax952p {
-        margin-top: px_to_vw_mobile(16);
-        width: px_to_vw_mobile(208);
+        margin-top: 16px;
+        width: 208px;
+        height: 29px;
       }
     }
 
-    @include mobileMax952p {
-      height: auto;
-      padding: px_to_vw_mobile(264) 0 px_to_vw_mobile(366);
-    }
 }
