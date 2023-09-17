@@ -68,6 +68,7 @@
         }
 
         @include mobileMax952p {
+            margin: 0 auto;
             width: 290px;
             font-size: 20px;
             line-height: 160%;

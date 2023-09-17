@@ -58,7 +58,7 @@
       @include mobileMax952p {
         width: px_to_vw_mobile(177);
         height: px_to_vw_mobile(209);
-        top: 104px;
+        top: px_to_vw_mobile(104);
         left: px_to_vw_mobile(-25);
       }
     }
