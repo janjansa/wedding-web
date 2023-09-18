@@ -207,64 +207,26 @@ if (document.querySelector(".c-hero")) {
   startTl.from(".c-hero__title", JSON.parse(animation), "<");
   startTl.from(".c-nav", {x: "-100%", duration: 1.4, ease: "power3"}, "<");
 
-  setTimeout(() => {
-    gsap.to(".c-hero__pic1", {y: "-20vh", duration: 2.5, ease: "power3", immediateRender: false,
-      scrollTrigger: {
-        trigger: ".c-hero",
-        start: "top top",
-        endTrigger: ".c-hero__pic1",
-        end: "bottom top",
-        scrub: true
-      }
-    });
+  gsap.to(".c-hero__pic1", {top: "-20vh", duration: 2.5, ease: "power3", immediateRender: false,
+    scrollTrigger: {
+      trigger: ".c-hero",
+      start: "top top",
+      endTrigger: ".c-hero__pic1",
+      end: "bottom top",
+      scrub: true
+    }
+  });
 
-    gsap.to(".c-hero__pic2", {y: "-20vh", duration: 2.5, ease: "power3", immediateRender: false,
-      scrollTrigger: {
-        trigger: ".c-hero",
-        start: "top top",
-        endTrigger: ".c-hero__pic2",
-        end: "bottom top",
-        scrub: true
-      }
-    });
-  }, 2800);
+  gsap.to(".c-hero__pic2", {top: "-20vh", duration: 2.5, ease: "power3", immediateRender: false,
+    scrollTrigger: {
+      trigger: ".c-hero",
+      start: "top top",
+      endTrigger: ".c-hero__pic2",
+      end: "bottom top",
+      scrub: true
+    }
+  });
 
-  // let scrolled = false;
-  //
-  // window.addEventListener("scroll", () => {
-  //
-  //   if(!scrolled) {
-  //     document.querySelector(".c-hero__pic1").classList.remove("--loader-prepare");
-  //     document.querySelector(".c-hero__pic2").classList.remove("--loader-prepare");
-  //
-  //     document.querySelector(".c-hero__pic1").style.setProperty("opacity", 1);
-  //     document.querySelector(".c-hero__pic2").style.setProperty("opacity", 1);
-  //
-  //     gsap.to(".c-hero__pic1", {y: "-25vh", duration: 0.5, ease: "power3", immediateRender: false, overwrite: true,
-  //       scrollTrigger: {
-  //         trigger: ".c-hero",
-  //         start: "top top",
-  //         endTrigger: ".c-hero__pic1",
-  //         end: "bottom top",
-  //         scrub: true,
-  //         markers: true
-  //       }
-  //     });
-  //
-  //     gsap.to(".c-hero__pic2", {y: "-25vh", duration: 0.5, ease: "power3", immediateRender: false, overwrite: true,
-  //       scrollTrigger: {
-  //         trigger: ".c-hero",
-  //         start: "top top",
-  //         endTrigger: ".c-hero__pic2",
-  //         end: "bottom top",
-  //         scrub: true,
-  //         markers: true
-  //       }
-  //     });
-  //   }
-  //
-  //   scrolled = true;
-  // })
 
 
   window.addEventListener("load", () => {
@@ -306,11 +268,9 @@ if (document.querySelector(".c-program-section")) {
   gsap.from(".c-program-section__timebox", {y: "20vh", duration: 1.3, ease: "power3.out",
     scrollTrigger: {
       trigger: ".c-program-section",
-      start: "top center",
-      end: "top center",
-      toggleActions: "play none reverse none",
-      // scrub: true,
-      markers: true
+      start: window.innerWidth > 952 ? "top center" : "top bottom-=25%",
+      end: window.innerWidth > 952 ? "top center" : "top bottom-=25%",
+      toggleActions: "play none reverse none"
     }
   })
 }
