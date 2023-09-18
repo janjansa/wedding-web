@@ -88,6 +88,7 @@
       }
 
       img {
+        // NOTE: u obrazků dávat display: block;, jinak se zarovnávají na baseline fontu a je pod nimi malá mezera
         position: absolute;
         top: px_to_vw_desktop(35);
         left: px_to_vw_desktop(651);

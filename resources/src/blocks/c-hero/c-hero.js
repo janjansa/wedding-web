@@ -13,6 +13,7 @@ if (document.querySelector(".c-hero")) {
   startTl.from(".c-hero__title", JSON.parse(animation), "<");
   startTl.from(".c-nav", {x: "-100%", duration: 1.4, ease: "power3"}, "<");
 
+  // NOTE: tady bych u obou trochu ubral na tom pohybu na scroll, mělo by to být víc subble + ease: "none" je lepší na tohle na scroll - easing tý animaci dodává samotnej smooth scroll
   gsap.to(".c-hero__pic1", {top: "-20vh", duration: 2.5, ease: "power3", immediateRender: false,
     scrollTrigger: {
       trigger: ".c-hero",
@@ -22,8 +23,12 @@ if (document.querySelector(".c-hero")) {
       scrub: true
     }
   });
-
-  gsap.to(".c-hero__pic2", {top: "-20vh", duration: 2.5, ease: "power3", immediateRender: false,
+  
+  gsap.to(".c-hero__pic2", {
+    top: "-20vh", // NOTE: hodnota má trochu jinou interpretaci + bug -> více na callu
+    duration: 2.5, 
+    ease: "power3", 
+    immediateRender: false,
     scrollTrigger: {
       trigger: ".c-hero",
       start: "top top",
